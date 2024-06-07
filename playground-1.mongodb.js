@@ -12,17 +12,8 @@
 // Select the database to use.
 use('test');
 
-// Insert a few documents into the sales collection.
-db.blogs.deleteMany({});
+console.log(db.getCollectionNames());
 
-db.blogs.insertOne(
-  {
-    title: 'Awesome Post!',
-    slug: 'awesome-post',
-    published: true,
-    content: 'This is the best post ever',
-    tags: ['featured', 'announcement'],
-  }
-);
+db.items.deleteMany({});
 
-db.blogs.find();
+db.items.find();
