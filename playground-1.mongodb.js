@@ -12,7 +12,7 @@
 // Select the database to use.
 use('test');
 
-console.log(db.getCollectionNames());
+// console.log(db.getCollectionNames());
 
 db.items.deleteMany({});
 
