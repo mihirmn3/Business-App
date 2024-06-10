@@ -14,6 +14,4 @@ use('test');
 
 // console.log(db.getCollectionNames());
 
-db.items.deleteMany({});
-
-db.items.find();
+db.serverStatus().connections;
