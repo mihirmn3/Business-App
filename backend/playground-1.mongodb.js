@@ -14,4 +14,4 @@ use('test');
 
 // console.log(db.getCollectionNames());
 
-db.serverStatus().connections;
+db.getCollectionNames();
