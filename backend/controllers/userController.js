@@ -1,5 +1,5 @@
 // Import required modules
-const User = require('../models/user.js'); // Import the User model
+const User = require('../models/user.js');
 const Cart = require('../models/cart.js');
 const generateId = require('../utils/generateId.js');
 
