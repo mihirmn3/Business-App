@@ -26,6 +26,7 @@ const ProductList = () => {
         {products.map(product => (
           <li key={product.productId} className="bg-white p-4 rounded shadow-md">
             <p className="font-bold">{product.name}</p>
+            <p className="font-bold">{product.business}</p>
             <p className="text-gray-600">{product.description}</p>
             {/* Add more product details as needed */}
           </li>

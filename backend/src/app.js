@@ -21,6 +21,8 @@ mongoose.connect(uri)
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/user');
 var productRouter = require('./routes/product');
+var businessRouter = require('./routes/business');
+var authRouter = require('./routes/auth');
 
 var app = express();
 
@@ -39,6 +41,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/user', usersRouter);
 app.use('/product', productRouter);
+app.use('/business', businessRouter);
+app.use('/login', authRouter)
 
 // catch 404 error and forward to error handler
 app.use(function(req, res, next) {

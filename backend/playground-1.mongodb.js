@@ -14,4 +14,6 @@ use('test');
 
 // console.log(db.getCollectionNames());
 
-db.getCollectionNames();
+db.getCollection('users').deleteMany({})
+db.getCollection('carts').deleteMany({})
+db.getCollection('products').deleteMany({})

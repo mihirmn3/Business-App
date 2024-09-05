@@ -30,15 +30,17 @@ class UserController {
     try {
       let newId = await generateId(User);
       let newCartId = await generateId(Cart);
-      const { name, mailId } = req.body;
+      const { name, email, hashedPassword } = req.body;
       const newCart = await Cart.create({
         cartId : newCartId
       });
       // Create a new user object
+      console.log(name, email, hashedPassword)
       const user = await User.create({
         userId: newId,
         name: name,
-        mailId: mailId,
+        mailId: email,
+        password: hashedPassword,
         cart: newCart
       });
 
